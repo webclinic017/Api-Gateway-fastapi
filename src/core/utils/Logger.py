@@ -5,13 +5,11 @@ from datetime import datetime
 
 
 
-# Crea un directorio 'logs' si no existe
 LOGGING_DIR = os.path.join(os.getcwd(), 'logs')
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
 
 
-# Configuración de logging
 LOGGING_CONFIG = {
     'version': 1,
     'disable_existing_loggers': False,
