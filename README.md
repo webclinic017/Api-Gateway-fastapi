@@ -35,6 +35,3 @@ Gateway is a service that acts as an intermediary between various microservices,
 - The services are not yet 100% completed and are in a development stage.
 
 ## Initial Configuration
-
-## General Diagram
-![gateway_diagram](https://github.com/nOz4ever/Gateway/assets/60816648/df5b13fc-61fe-4d87-9f1f-20db3be21320)
