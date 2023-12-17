@@ -35,3 +35,6 @@ Gateway is a service that acts as an intermediary between various microservices,
 - The services are not yet 100% completed and are in a development stage.
 
 ## Initial Configuration
+
+## General Diagram
+![274782488-df5b13fc-61fe-4d87-9f1f-20db3be21320](https://github.com/ogarcia-dev/Gateway/assets/60816648/a1e423de-1290-4752-8718-2c263d6ff8ce)
