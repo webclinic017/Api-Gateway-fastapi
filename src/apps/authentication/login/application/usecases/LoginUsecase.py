@@ -6,9 +6,9 @@ from core.helpers.ItemHelper import ITEM_HELPER
 from core.helpers.HasingHelper import HASHING
 from core.helpers.JwtManagerHelper import JwtManagerHelper
 from apps.authentication.login.domain.repositories.LoginRepository import LOGIN_REPOSITORY
-from apps.authentication.login.domain.entities.LoginEntity import (
-    LoginRequestEntity,
-    LoginResponseEntity
+from Gateway.src.apps.authentication.login.domain.schemas.LoginSchema import (
+    LoginRequestSchema,
+    LoginResponseSchema
 )
 
 
@@ -16,7 +16,7 @@ from apps.authentication.login.domain.entities.LoginEntity import (
 class LoginUsecase:
 
     @staticmethod
-    async def login(login: LoginRequestEntity) -> Union[LoginResponseEntity, HTTPException]:
+    async def login(login: LoginRequestSchema) -> Union[LoginResponseSchema, HTTPException]:
         
         user = await LOGIN_REPOSITORY.get_user_data(user_email=login.email)
 
@@ -68,7 +68,7 @@ class LoginUsecase:
             )
         )
 
-        return LoginResponseEntity(
+        return LoginResponseSchema(
             type = "Bearer",
             token = await jwt.create_token(),
             refresh_token = await jwt.refresh_token()

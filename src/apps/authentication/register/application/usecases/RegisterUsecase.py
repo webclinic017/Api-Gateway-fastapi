@@ -3,7 +3,7 @@ from typing import Any
 from fastapi import HTTPException, status
 
 from core.helpers.HasingHelper import HASHING
-from apps.authentication.register.domain.entities.RegisterEntity import RegisterRequestEntity
+from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
 from apps.authentication.register.domain.repositories.RegisterRepository import REGISTER_REPOSITORY
 
 
@@ -11,7 +11,7 @@ from apps.authentication.register.domain.repositories.RegisterRepository import 
 class RegisterUsecase:
 
     @staticmethod
-    async def register(register: RegisterRequestEntity) -> Any:
+    async def register(register: RegisterRequestSchema) -> Any:
         
         if await REGISTER_REPOSITORY.filter(email=register.email):
             """ Verificara la existencia del correo electronico """

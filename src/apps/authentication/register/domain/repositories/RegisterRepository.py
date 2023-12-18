@@ -1,16 +1,16 @@
 from core.databases.Models import Users
 from core.bases.BaseRepositories import BaseRepository
-from apps.authentication.register.domain.entities.RegisterEntity import (
-    RegisterRequestEntity,
-    RegisterResponseEntity
+from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import (
+    RegisterRequestSchema,
+    RegisterResponseSchema
 )
 
 
 
 class RegisterRepository(BaseRepository):
     model = Users
-    request_schema = RegisterRequestEntity
-    response_schema = RegisterResponseEntity
+    request_schema = RegisterRequestSchema
+    response_schema = RegisterResponseSchema
 
 
     async def register_user(

@@ -5,8 +5,8 @@ from sqlalchemy.orm import selectinload
 
 from core.databases.Models import Users
 from core.bases.BaseRepositories import BaseRepository
-from apps.authentication.login.domain.entities.LoginEntity import LoginRequestEntity
-from apps.authentication.register.domain.entities.RegisterEntity import RegisterResponseEntity
+from Gateway.src.apps.authentication.login.domain.schemas.LoginSchema import LoginRequestSchema
+from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
 from core.databases.Models import (
     Users,
     Systems,
@@ -17,8 +17,8 @@ from core.databases.Models import (
 
 class LoginRepository(BaseRepository):
     model = Users
-    request_schema = LoginRequestEntity
-    response_schema = RegisterResponseEntity
+    request_schema = LoginRequestSchema
+    response_schema = RegisterRequestSchema
 
             
     async def get_user_data(self, user_email: int) -> Dict:

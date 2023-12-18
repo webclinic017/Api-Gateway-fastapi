@@ -2,7 +2,7 @@ from pydantic import BaseModel, validator
 
 
 
-class LoginRequestEntity(BaseModel):
+class LoginRequestSchema(BaseModel):
     system_code: str
     email: str
     password: str
@@ -29,7 +29,7 @@ class LoginRequestEntity(BaseModel):
 
 
 
-class LoginResponseEntity(BaseModel):
+class LoginResponseSchema(BaseModel):
     type: str
     token: str
     refresh_token: str

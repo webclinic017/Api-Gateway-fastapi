@@ -1,6 +1,7 @@
 from passlib.context import CryptContext
 
 
+
 class HashingHelper:
     """
         Class that provides methods for hashing and 

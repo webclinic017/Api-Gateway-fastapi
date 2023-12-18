@@ -4,6 +4,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, AsyncEngin
 from settings import SETTINGS
 
 
+
 class Base(DeclarativeBase):
     """
         Base class for SQLAlchemy declarative statements.

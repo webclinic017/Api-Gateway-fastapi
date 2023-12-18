@@ -6,7 +6,7 @@ from pydantic import (
 
 
 
-class RegisterRequestEntity(BaseModel):
+class RegisterRequestSchema(BaseModel):
     email: EmailStr
     password: str
     password_repeat: str
@@ -31,6 +31,6 @@ class RegisterRequestEntity(BaseModel):
     
 
 
-class RegisterResponseEntity(BaseModel):
+class RegisterResponseSchema(BaseModel):
     id: int
     email: str

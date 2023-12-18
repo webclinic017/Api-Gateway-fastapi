@@ -2,7 +2,7 @@ from pydantic import BaseModel, validator
 
 
 
-class ChangePasswordRequestEntity(BaseModel):
+class ChangePasswordRequestSchema(BaseModel):
     new_password: str
     repeat_new_password: str
 

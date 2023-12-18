@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr, validator
 
 
 
-class ForgotPasswordRequestEntity(BaseModel):
+class ForgotPasswordRequestSchema(BaseModel):
     email: EmailStr
 
     @validator("email")
