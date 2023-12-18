@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status
 
 from core.bases.BaseSchemas import ResponseSchema
-from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
+from apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
 from apps.authentication.register.application.usecases.RegisterUsecase import REGISTER_USECASES
 
 

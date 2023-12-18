@@ -3,7 +3,7 @@ from typing import Any
 from fastapi import HTTPException, status
 
 from core.helpers.HasingHelper import HASHING
-from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
+from apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
 from apps.authentication.register.domain.repositories.RegisterRepository import REGISTER_REPOSITORY
 
 

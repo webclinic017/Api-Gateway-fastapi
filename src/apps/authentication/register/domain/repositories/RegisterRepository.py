@@ -1,6 +1,6 @@
 from core.databases.Models import Users
 from core.bases.BaseRepositories import BaseRepository
-from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import (
+from apps.authentication.register.domain.schemas.RegisterSchema import (
     RegisterRequestSchema,
     RegisterResponseSchema
 )

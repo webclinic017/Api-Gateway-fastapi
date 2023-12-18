@@ -6,7 +6,7 @@ from core.helpers.ItemHelper import ITEM_HELPER
 from core.helpers.HasingHelper import HASHING
 from core.helpers.JwtManagerHelper import JwtManagerHelper
 from apps.authentication.login.domain.repositories.LoginRepository import LOGIN_REPOSITORY
-from Gateway.src.apps.authentication.login.domain.schemas.LoginSchema import (
+from apps.authentication.login.domain.schemas.LoginSchema import (
     LoginRequestSchema,
     LoginResponseSchema
 )

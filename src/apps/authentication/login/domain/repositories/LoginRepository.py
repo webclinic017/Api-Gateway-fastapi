@@ -5,8 +5,8 @@ from sqlalchemy.orm import selectinload
 
 from core.databases.Models import Users
 from core.bases.BaseRepositories import BaseRepository
-from Gateway.src.apps.authentication.login.domain.schemas.LoginSchema import LoginRequestSchema
-from Gateway.src.apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
+from apps.authentication.login.domain.schemas.LoginSchema import LoginRequestSchema
+from apps.authentication.register.domain.schemas.RegisterSchema import RegisterRequestSchema
 from core.databases.Models import (
     Users,
     Systems,
