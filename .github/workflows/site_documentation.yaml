@@ -1,0 +1,45 @@
+name: Site Documentation Cephalopodus API Gateway
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+  
+      - name: Debug Information
+        run: |
+          DOCUMENTATION_DIR="documentation"
+          ls -R $DOCUMENTATION_DIR
+
+      - name: Build MkDocs
+        run: |
+          DOCUMENTATION_DIR="documentation"
+          cd $DOCUMENTATION_DIR
+          mkdocs build
+
+      - name: Site Documentation
+        run: |
+          DOCUMENTATION_DIR="documentation"
+          cd $DOCUMENTATION_DIR
+          mkdocs gh-deploy
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./documentation/docs
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}

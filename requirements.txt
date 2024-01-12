@@ -20,3 +20,9 @@ grpcio-tools
 passlib[bcrypt]
 cryptography
 python-decouple
+
+# TESTING
+pytest
+
+# DOCUMENTATION
+mkdocs-material
