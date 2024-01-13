@@ -3,7 +3,7 @@ name: Site Documentation Cephalopodus API Gateway
 on:
   push:
     branches:
-      - master
+      - master 
       - main
       - develop
 
@@ -14,32 +14,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-  
-      - name: Debug Information
-        run: |
-          DOCUMENTATION_DIR="documentation"
-          ls -R $DOCUMENTATION_DIR
-
-      - name: Build MkDocs
-        run: |
-          DOCUMENTATION_DIR="documentation"
-          cd $DOCUMENTATION_DIR
-          mkdocs build
-
-      - name: Site Documentation
-        run: |
-          DOCUMENTATION_DIR="documentation"
-          cd $DOCUMENTATION_DIR
-          mkdocs gh-deploy --force
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
         with:
-          publish_dir: ./documentation/docs
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: cd documentation && mkdocs gh-deploy --force
