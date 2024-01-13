@@ -25,4 +25,5 @@ python-decouple
 pytest
 
 # DOCUMENTATION
+mkdocs[i18n]
 mkdocs-material
