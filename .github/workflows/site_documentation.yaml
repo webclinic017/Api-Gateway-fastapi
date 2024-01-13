@@ -26,7 +26,7 @@ jobs:
         pip install mkdocs mkdocs-material
 
     - name: Build
-      run: cd documentation && mkdocs build --clean --force
+      run: cd documentation && mkdocs build --clean
 
     - name: Deploy
       run: |
