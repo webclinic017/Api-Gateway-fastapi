@@ -35,7 +35,7 @@ jobs:
         run: |
           DOCUMENTATION_DIR="documentation"
           cd $DOCUMENTATION_DIR
-          mkdocs gh-deploy
+          mkdocs gh-deploy --force
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
