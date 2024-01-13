@@ -30,8 +30,6 @@ jobs:
 
     - name: Deploy
       run: |
-        mv site/* $GITHUB_WORKSPACE
-        rm -r site
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git add .
