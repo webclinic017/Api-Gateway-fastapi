@@ -8,28 +8,33 @@ on:
       - develop
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          pip install mkdocs
-          pip install mkdocs-material
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs mkdocs-material
 
-      - name: Build and deploy
-        run: |
-          cd documentation && mkdocs build
-          git checkout --orphan gh-pages
-          git --work-tree site add --all
-          git --work-tree site commit -m "Deploy to GitHub Pages"
-          git push origin HEAD:gh-pages --force
+    - name: Build
+      run: cd documentation && mkdocs build --clean --force
 
+    - name: Deploy
+      run: |
+        mv site/* $GITHUB_WORKSPACE
+        rm -r site
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add .
+        git commit -m "Deploy MkDocs-Material to GitHub Pages"
+        git branch -M gh-pages
+        git push origin gh-pages
