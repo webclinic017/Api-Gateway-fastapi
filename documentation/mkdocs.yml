@@ -1,5 +1,6 @@
 site_name: Cephalopodus Gateway API
 site_url: https://ogarcia-dev.github.io/Gateway/
+site_dir: site
 
 theme:
   language: en
