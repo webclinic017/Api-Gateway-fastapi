@@ -1,9 +1,8 @@
-name: Deploy static content to Pages
+name: Deploy Documentation Cephalopodus API Gateway
 
 on:
   push:
     branches: 
-      - master
       - gh-pages
 
   workflow_dispatch:
