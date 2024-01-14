@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
       - develop
       - gh-pages
 
@@ -14,31 +15,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-
-      - name: Install Dependencies
-        run: |
-          cd documentation
-          pip install mkdocs-material
-
-      - name: Build Documentation
-        run: |
-          cd documentation
-          mkdocs build
-
-      - name: Deploy to GitHub Pages
-        run: |
-          cd documentation
-          mkdocs gh-deploy --force
-
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: documentation/site
+      - run: cd documentation && pip install mkdocs-material
+      - run: cd documentation && mkdocs gh-deploy --force
