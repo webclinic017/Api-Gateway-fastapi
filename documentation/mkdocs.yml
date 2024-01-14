@@ -1,5 +1,6 @@
 site_name: Cephalopodus Gateway API
 site_url: https://ogarcia-dev.github.io/Gateway/
+site_dir: documentation/docs
 
 theme:
   language: en
@@ -23,10 +24,10 @@ theme:
   - navigation.tabs
 
 extra:
-  - en: 'en'
-  - es: 'es'
+  en: 'en'
+  es: 'es'
 
-docs_dir: 'docs/${LANG}'
+docs_dir: 'docs'
 
 nav:
   - Home: '${LANG}/index.md'
