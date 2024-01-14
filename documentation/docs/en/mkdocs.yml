@@ -1,0 +1,28 @@
+site_name: Cephalopodus Gateway API
+site_url: https://ogarcia-dev.github.io/Gateway/en
+site_dir: documentation/docs/en
+
+theme:
+  language: en
+  name: material
+  palette:
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: teal
+      accent: amber
+
+  features:
+  - search.suggest
+  - search.highlight
+  - content.tabs.link
+  - navigation.indexes
+  - content.tooltips
+  - navigation.path
+  - content.code.annotate
+  - content.code.copy
+  - content.code.select
+  - navigation.tabs
+
+nav:
+  - Home: 'index.md'
+  - Release Notes: 'release.md'

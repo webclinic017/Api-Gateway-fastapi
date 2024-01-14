@@ -1,9 +1,9 @@
 site_name: Cephalopodus Gateway API
-site_url: https://ogarcia-dev.github.io/Gateway/
-site_dir: documentation/docs
+site_url: https://ogarcia-dev.github.io/Gateway/es
+site_dir: documentation/docs/es
 
 theme:
-  language: en
+  language: es
   name: material
   palette:
     - media: '(prefers-color-scheme: dark)'
@@ -23,21 +23,6 @@ theme:
   - content.code.select
   - navigation.tabs
 
-extra:
-  alternate:
-    - name: English
-      link: /Gateway/en/ 
-      lang: en
-
-    - name: Español
-      link: /Gateway/es/
-      lang: es
-
-nav/en:
-  - Home: 'en/index.md'
-  - Release Notes: 'en/release.md'
-
-
-nav/es:
-  - Inicio: 'es/index.md'
-  - Release Notes: 'es/release.md'
+nav:
+  - Inicio: 'index.md'
+  - Versiones: 'release.md'
