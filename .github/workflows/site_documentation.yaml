@@ -7,31 +7,18 @@ on:
       - master
       - develop
 
+permissions:
+  contenta: write
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/checkout@v3
+      uses: actions/setup-python@v4
       with:
         python-version: 3.x
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install mkdocs mkdocs-material
-
-    - name: Build MkDocs
-      run: cd documentation && mkdocs build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.TOKEN }}
-        publish_dir: ./site
-        publish_branch: gh-pages
-        force_orphan: true
+      run: pip install mkdocs mkdocs-material
+      run: cd documentation && mkdocs gh-deploy --force
