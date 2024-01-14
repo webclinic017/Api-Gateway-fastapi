@@ -4,20 +4,19 @@ on:
   push:
     branches:
       - master
+      - main
       - develop
 
 permissions:
-  contenta: write
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      uses: actions/checkout@v3
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.x
-
-      run: pip install mkdocs mkdocs-material
-      run: cd documentation && mkdocs gh-deploy --force
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: cd documentation && pip install mkdocs-material
+      - run: cd documentation && mkdocs gh-deploy --force
