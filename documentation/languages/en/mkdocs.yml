@@ -26,3 +26,18 @@ theme:
 nav:
   - Home: 'index.md'
   - Release Notes: 'release.md'
+
+  - Getting Started:
+    - Architecture: 'started/architecture/architecture.md'
+
+    - Vault:
+      - libraries: ''
+
+    - Gateway:
+      - libraries: ''
+      - Authentication:
+        - login: ''
+        - register: ''
+    
+    - Administrator:
+        
