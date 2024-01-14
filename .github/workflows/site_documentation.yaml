@@ -20,5 +20,5 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: cd documentation/en && mkdocs gh-deploy --force
-      - run: cd documentation/es && mkdocs gh-deploy --force
+      - run: cd documentation/languages/en && mkdocs gh-deploy --force
+      - run: cd documentation/languages/es && mkdocs gh-deploy --force
