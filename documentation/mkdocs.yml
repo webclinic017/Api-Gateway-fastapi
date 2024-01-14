@@ -23,12 +23,21 @@ theme:
   - content.code.select
   - navigation.tabs
 
-extra:
-  en: 'en'
-  es: 'es'
+locales:
+  - es
+  - en
 
-docs_dir: 'docs'
+plugins:
+  - mkdocs-material:
+      languages:
+        - es
+        - en
 
-nav:
-  - Home: '${LANG}/index.md'
-  - Release Notes: '${LANG}/release.md'
+nav/en:
+  - Home: 'en/index.md'
+  - Release Notes: 'en/release.md'
+
+
+nav/es:
+  - Inicio: 'es/index.md'
+  - Release Notes: 'es/release.md'
