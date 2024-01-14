@@ -3,7 +3,6 @@ name: Site Documentation Cephalopodus API Gateway
 on:
   push:
     branches:
-      - main
       - master
       - develop
 
