@@ -44,19 +44,19 @@ nav:
         - register: 'started/gateway/authentication/register.md'
     
     - Administrator:
-      - Administrator: 'started/administrator/administrator.md'
-        - Administration:
-          - Administration: 'started/administrator/administration/administration.md'
-          - Systems: 'started/administrator/administration/systems.md'
-          - Roles: 'started/administrator/administration/roles.md'
-          - Groups: 'started/administrator/administration/groups.md'
-          - Users: 'started/administrator/administration/users.md'
-        
-        - Services Discover:
-          - Services Discover: 'started/administrator/service_discover/service_discover.md'
-          - Microservices: 'started/administrator/service_discover/microservices.md'
-          - Endpoints: 'started/administrator/service_discover/endpoints.md'
+      - Administrator Started: 'started/administrator/administrator.md'
+      - Administration:
+        - Administration: 'started/administrator/administration/administration.md'
+        - Systems: 'started/administrator/administration/systems.md'
+        - Roles: 'started/administrator/administration/roles.md'
+        - Groups: 'started/administrator/administration/groups.md'
+        - Users: 'started/administrator/administration/users.md'
+      
+      - Services Discover:
+        - Services Discover: 'started/administrator/service_discover/service_discover.md'
+        - Microservices: 'started/administrator/service_discover/microservices.md'
+        - Endpoints: 'started/administrator/service_discover/endpoints.md'
 
-        - Parameters: 'started/administrator/parameter.md'
-        - Menus: 'started/administrator/menu.md'
+      - Parameters: 'started/administrator/parameter.md'
+      - Menus: 'started/administrator/menu.md'
 
