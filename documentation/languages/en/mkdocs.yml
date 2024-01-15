@@ -25,7 +25,6 @@ theme:
 
 nav:
   - Home: 'index.md'
-  - Release Notes: 'release.md'
 
   - Getting Started:
     - Architecture: 'started/architecture/architecture.md'
@@ -59,4 +58,6 @@ nav:
 
       - Parameters: 'started/administrator/parameter.md'
       - Menus: 'started/administrator/menu.md'
+
+  - Release Notes: 'release.md'
 
