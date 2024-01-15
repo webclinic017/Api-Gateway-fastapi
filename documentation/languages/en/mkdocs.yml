@@ -1,4 +1,4 @@
-site_name: Cephalopodus Gateway API
+site_name: Cephalopodus API Gateway
 site_url: https://ogarcia-dev.github.io/Gateway/
 site_dir: documentation/docs/en
 
@@ -31,13 +31,32 @@ nav:
     - Architecture: 'started/architecture/architecture.md'
 
     - Vault:
-      - libraries: ''
+      - Vault: 'started/vault/vault.md'
+      - Protobufs: 'started/vault/protobufs.md'
 
     - Gateway:
-      - libraries: ''
+      - Gateway: 'started/gateway/gateway.md'
+      - Http: 'started/gateway/http.md'
+      - Websocket: 'started/gateway/websocket.md'
+    
       - Authentication:
-        - login: ''
-        - register: ''
+        - login: 'started/gateway/authentication/login.md'
+        - register: 'started/gateway/authentication/register.md'
     
     - Administrator:
+      - Administrator: 'started/administrator/administrator.md'
+        - Administration:
+          - Administration: 'started/administrator/administration/administration.md'
+          - Systems: 'started/administrator/administration/systems.md'
+          - Roles: 'started/administrator/administration/roles.md'
+          - Groups: 'started/administrator/administration/groups.md'
+          - Users: 'started/administrator/administration/users.md'
         
+        - Services Discover:
+          - Services Discover: 'started/administrator/service_discover/service_discover.md'
+          - Microservices: 'started/administrator/service_discover/microservices.md'
+          - Endpoints: 'started/administrator/service_discover/endpoints.md'
+
+        - Parameters: 'started/administrator/parameter.md'
+        - Menus: 'started/administrator/menu.md'
+
